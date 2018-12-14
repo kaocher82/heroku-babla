@@ -15,7 +15,7 @@ To get started follow the steps above.
 
 ```
 cd pyconbalkan
-python -m venv .venv
+virtualenv .venv
 ```
 
 3. Activate the virtual environment:
