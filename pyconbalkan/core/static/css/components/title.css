@@ -1,0 +1,72 @@
+/*
+ * Title
+ * Heading components.
+ */
+
+h1,
+h2,
+h3 {
+    line-height: initial;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 40px 0 20px 0;
+    color: #F3D66C;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 20px 0 10px 0;
+    color: #22A4D9;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 20px 0 10px 0;
+    color: #f3d66c;
+}
+
+.centered {
+    text-align: center;
+
+}
+
+.sponsors,
+.keystone,
+.platinum,
+.gold,
+.silver,
+.partner,
+.mediapartner {
+    padding: 0;
+    text-align: center;
+}
+
+.keystone {
+    font-size: 4rem;
+    color: moccasin;
+}
+
+.platinum {
+    color: lightgray;
+}
+
+.gold {
+    color: gold;
+}
+
+.silver {
+    color: silver;
+}
+
+.partner {
+    color: greenyellow;
+}
+
+.mediapartner {
+    color: plum;
+}

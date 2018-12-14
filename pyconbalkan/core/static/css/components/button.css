@@ -1,0 +1,47 @@
+/*
+ * Button
+ */
+
+.button {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: auto;
+    line-height: 40px;
+    padding: 0 40px;
+    border: 0;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #22A4D9;
+    color: #fff;
+}
+
+/* Modifiers */
+
+.button--push {
+    float: right;
+}
+
+.button--fullwidth {
+    width: 100%;
+}
+
+.button--yellow {
+    color: #000;
+    background-color: #F3D66C !important;
+}
+
+.button--blue {
+    background-color: #22A4D9;
+}
+
+.button--blue:hover {
+    color: #000;
+    background-color: #F3D66C;
+}

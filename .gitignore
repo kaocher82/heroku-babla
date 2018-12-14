@@ -1,0 +1,11 @@
+.DS_Store
+# file for python-decouple
+.env
+# virtual env
+.venv/
+.idea
+*.sqlite3
+*.py[cod]
+__pycache__
+
+/staticfiles/

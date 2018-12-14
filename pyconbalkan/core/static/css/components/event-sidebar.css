@@ -1,0 +1,94 @@
+/*
+ * Event Sidebar
+ * Website left sidebar with the event info.
+ */
+
+.event-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    padding: 20px 40px 40px 40px;
+    background-image: url(/static/img/sidebar-bg.png);
+    background-size: 100% 100%;
+}
+
+@media (max-width: 1280px) {
+    .event-sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 40px 15%;
+    }
+}
+
+    .logo {
+        display: block;
+        width: 220px;
+        height: 220px;
+        background-image: url(/static/img/pycon-logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform .2s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 1280px) {
+        .logo {
+            width: 100%;
+            background-position: center left;
+        }
+    }
+
+    .event-sidebar__title > h1,
+    .event-sidebar__title > h2,
+    .event-sidebar__title > h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: #212529;
+    }
+
+    .event-sidebar__text {
+        margin: 10px 0 20px 0;
+        color: #212529;
+    }
+
+    .event-sidebar__text:last-of-type {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 1280px) {
+        .event-sidebar__text {
+            margin: 10px auto 20px auto;
+        }
+    }
+
+        .event-sidebar__icon {
+            width: 20px;
+            color: #22A4D9;
+        }
+
+    .event-button__wrapper {
+
+    }
+
+    @media (max-width: 1280px) {
+        .event-button__wrapper {
+            margin: 10px auto 20px auto;
+        }
+    }
+
+    h2.supported-by {
+        color: #ffd64f;
+        margin-bottom: 20px;
+    }
+
+    .psf-logo {
+        width: 180px;
+        height: auto;
+        margin-bottom: 10px;
+    }

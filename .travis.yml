@@ -1,0 +1,15 @@
+language: python
+python:
+- '3.6'
+branches:
+  only:
+  - master
+install:
+- pip install -r requirements.txt
+script:
+- python manage.py test
+deploy:
+  provider: heroku
+  app: pyconbalkan
+  api_key:
+    secure: WmDrTl9ecbp6fZO9NxSY6TmHcanHzUUSGo/XsMAFuBhblj78ZcrEAkQC/s5qR0g1n7EJXpTWy3BhbP11pkkWno9aBqSmSckeEuLxIzwhC7WFH8KrICWrXA1YqGtHfCT71NuIEvtzjXfShRMOfbSyKeOpJ2WtC7cP+W6Yt9bKMuS39oQGfhB5NlbBeOOHMZ6kFDbDOPXWRUaoDZC2GJABUjbYGDO/E4qBrVdWoF6t2dQaloYJmVIOyzynegNfxmcFHndgbEQ8NhPTc9A33F9rHts3FSGQ4dQEH1JzJqNtojqPYvOg2qYCkUxfeI7W3sB7e+UjWMlfMNv3IyIkH9cbEj65Ot0X7brGaQitu9jabeQ0l6zPGrMKhVCczhhx0gswZCiokeivoOOlJ3AmHqzyqEDkfcPODf0CZdPjsmNkpx/PZX/l/eN5MH9JsPtse+Sg/duki0rinwMv6bJ+H8ff9o0fS591KUSp1vjwPFAXM7JatfdqvYef1zx6SFS4OkTHGYfAwM+ABPkGs+FcuFapO+jBz2yVqZ0ndKwUH2T5sA3G3FTkf4kYdCyki+25soI8cJyASKNR5Krj6Es/3fdoOGm+fR0hEqFBWN8FsBMywhkArZkHO2g57F6ytDIqHsFS5dKjnZuYCJDTZnbzEvHiWEO34fgEv3NVcezEBwSTdBI=

@@ -1,0 +1,99 @@
+/*
+ * Card
+ * List of cards with card, organizer and volunteer info.
+ */
+
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+    .card__item {
+        flex: 0 0 280px;
+        margin: 0 40px 40px 40px;
+        color: white;
+    }
+
+    .card__item:hover a .card__image {
+        border: 4px solid #f3d66c;
+    }
+
+    .card__item:hover h2.centered {
+        color: #f3d66c;
+    }
+
+    @media (max-width: 1280px) {
+        .card__item {
+            min-width: 100%;
+            margin: 0 0 40px 0;
+        }
+    }
+
+        .card__image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            border: 4px solid #22A4D9;
+            background-color: #22A4D9;
+            overflow: hidden;
+        }
+
+        .card__image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card__name {
+            font-size: 2.8rem;
+            text-align: center;
+        }
+
+        .card__job {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+.sponsoring {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+    .sponsoring__item {
+        flex: 0 0 30%;
+        padding: 40px;
+        margin: 0 40px 40px 0;
+        background-color: #f3d66c;
+        color: #32383A;
+        border-radius: 20px;
+    }
+
+    .sponsoring__item:hover {
+        background-color: #22A4D9;
+        color: white;
+    }
+
+    .sponsoring__item:hover h1,
+    .sponsoring__item:hover .package__description {
+        color: white;
+    }
+
+        .sponsoring__item h1,
+        .sponsoring__item .package__description {
+            margin-top: 0;
+            color: #32383A;
+        }
+
+        .sponsoring__item h1 span.sponsoring--limit {
+            font-weight: normal;
+        }
+
+        .sponsoring__item h1 span.sponsoring--amount {
+            font-size: 22px;
+        }

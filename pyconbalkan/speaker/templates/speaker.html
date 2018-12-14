@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    {# Speaker INFO #}
+
+    <div class="speaker">
+        <div class="speaker__image">
+            <img src="{{ speaker.images.first.profile_picture.url }}">
+        </div>
+
+        <div class="speaker__details">
+            <h1>
+                {% if speaker.keynote %}<i class="fas fa-star"></i>{% endif %}
+                {{ speaker.name }}
+                {% if speaker.country %}<i class="flag em em-flag-{{ speaker.country.code|lower }}"></i>{% endif %}
+            </h1>
+
+            <h2><i class="fas fa-laptop-code"></i> {{ speaker.job }} {% if speaker.company %}- {{ speaker.company }}{% endif %}</h2>
+            <p class="speaker__description title--white">
+                {{ speaker.description|safe }}
+            </p>
+
+            <div class="social__links">
+                {% if speaker.personal_website %}
+                <a href="{{ speaker.personal_website }}" class="website" target="_ blank"></a>
+                {% endif %}
+                {% if speaker.github %}
+                    <a href="{{ speaker.github }}" class="github" target="_ blank"></a>
+                {% endif %}
+                {% if speaker.linkedin %}
+                    <a href="{{ speaker.linkedin }}" class="linkedin" target="_ blank"></a>
+                {% endif %}
+                {% if speaker.twitter %}
+                    <a href="{{ speaker.twitter }}" class="twitter" target="_ blank"></a>
+                {% endif %}
+                {% if speaker.facebook %}
+                    <a href="{{ speaker.facebook }}" class="facebook" target="_ blank"></a>
+                {% endif %}
+            </div>
+
+            {% for presentation in speaker.presentation.all %}
+                <h2>
+                    {% if presentation.type == 1 %}
+                    <i class="fas fa-cogs"></i>
+                    {% else %}
+                    <i class="fas fa-bullhorn"></i>
+                    {% endif %}
+                    {{ presentation.title }}
+                </h2>
+                <p class="speaker__description title--white">
+                    {{ presentation.description|safe }}
+                </p>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

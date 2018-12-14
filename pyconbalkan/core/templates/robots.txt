@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /timetable
+Disallow: /info
+Disallow: /admin
